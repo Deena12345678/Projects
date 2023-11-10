@@ -9,11 +9,7 @@ function App() {
     <BrowserRouter>
     <div className="App">
     <Header />
-        <Routes>
-        <Route path="/" element={<HomePage />} />
-        </Routes>
-       
-
+    <HomePage />
     </div>
     </BrowserRouter>
   );
