@@ -12,7 +12,7 @@ const HomePage = () => {
       <div className="big-banner">
         <img src={leath} alt="Big Banner" />
       </div>
-      <h2 className="news-ticker">Latest News: This is a sample news that runs from left to right at 15s speed</h2>
+      <h2 className="news-ticker">Latest News: This is a sample news that runs from left to right at 15s speed.</h2>
       {/* Recommended Products Section */}
       <div className="recommended-products">
     
