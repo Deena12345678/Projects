@@ -1,0 +1,104 @@
+/* homePage.css */
+
+.home-page {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+    padding: 0 20px; /* Add padding for better mobile view */
+  }
+  
+  /* Big Banner Section */
+  .big-banner {
+    border: 2px solid #A07855;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-align: center; /* Center the content within big-banner */
+    border-radius: 20px;
+    box-shadow: 4px 20px 60px rgba(25, 23, 22, 0.6); /* Increased shadow effect */
+  }
+  
+  .big-banner img {
+    max-width: 100%; /* Make the image fill the container */
+    max-height: 600px;
+    object-fit: contain;
+    display: inline-block; /* Ensure the image is centered */
+  }
+  
+  /* Recommended Products Section */
+  .recommended-products {
+    border: 2px solid #A07855;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 4px 20px 60px rgba(22, 20, 19, 0.6); /* Increased shadow effect */
+  }
+  
+  .product {
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction: column; /* Stack products in a column on small screens */
+  }
+  
+  .product img {
+    width: 100%; /* Make the image fill its container */
+    height: auto;
+    margin-bottom: 10px; /* Add space between image and text */
+  }
+  
+  .product-info {
+    flex: 1;
+  }
+  
+
+  .product img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .product-info h3 {
+    margin: 0;
+  }
+  
+  .product-info a {
+    display: inline-block;
+    background-color: #A07855;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+
+  /* Media Query for Mobile View */
+  @media only screen and (max-width: 600px) {
+    .big-banner img {
+      max-height: 300px; /* Adjust max height for smaller screens */
+    }
+  }
+
+  .news-ticker {
+    white-space: nowrap;
+   
+    height: 40px; /* Increase the container height */
+    font-size: 20px; /* Adjust the font size */
+    animation: ticker 10s linear infinite; /* Adjust the animation duration */
+  }
+@media only screen and (max-width: 600px) {
+  .news-ticker {
+    white-space: nowrap;
+   
+    height: 40px; /* Increase the container height */
+    font-size: 14px; /* Adjust the font size */
+    animation: ticker 10s linear infinite; /* Adjust the animation duration */
+  }
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

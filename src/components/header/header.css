@@ -1,0 +1,180 @@
+.together{
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #D4B996, #A07855);
+    padding: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Quicksand', sans-serif; /* Apply Quicksand font */
+  }
+  .header-scrolled {
+    background: linear-gradient(to right, rgba(212, 185, 150, 0.9), rgba(160, 120, 85, 0.9)); /* Adjusted background color with transparency */
+  }
+  
+  /* Style for the page-info section */
+  .page-info {
+    text-align: center;
+    margin-bottom: 15px;
+    background: white;
+    padding: 10px;
+  }
+  
+  /* Style for the logo, nav-links, and login sections */
+  .logo a,
+  .nav-links a,
+  .login button {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+    position: relative;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Hover effect for logo, nav-links, and login sections */
+  .logo a:hover,
+  .nav-links a:hover,
+  .login button:hover {
+    color: #f39c12;
+  }
+  .header.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    animation: fadeInDown 0.5s;
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Underline animation for links on hover */
+  .logo a::before,
+  .nav-links a::before,
+  .login button::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #f4f4f4;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .logo a:hover::before,
+  .nav-links a:hover::before,
+  .login button:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+  
+  /* Style for the search-bar section */
+  .search-bar {
+    display: flex;
+    align-items: center;
+    margin-top: 10px; /* Adjusted margin for better spacing */
+    background: rgba(255, 255, 255, 0.8); /* Adjusted background color with transparency */
+    border-radius: 5px;
+    padding: 5px; /* Adjusted padding for the search bar */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .search-bar input {
+    padding: 10px;
+    border: none;
+    width: 300px;
+    background-color: transparent;
+    color: #333;
+    outline: none;
+  }
+  
+  .search-bar button {
+    padding: 10px 20px;
+    background: linear-gradient(to right, #D4B996, #A07855);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Hover effect for the search button */
+  .search-bar button:hover {
+    background: linear-gradient(to right, #A07855, #D4B996);
+  }
+  
+
+  /* Media query for mobile devices */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .logo a,
+    .nav-links a,
+    .login button {
+      margin: 10px 20px; /* Adjusted margin for better spacing */
+    }
+  
+    .search-bar {
+      width: 90%;
+      margin-top: 10px; /* Adjusted margin for better spacing */
+    }
+  }
+ 
+  
+/* Style for the login button */
+  .login button {
+    padding: 20px 40px;
+    background: linear-gradient(to right, #D4B996, #A07855);
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    transition: color 0.3s, border-color 0.3s;
+  }
+  
+  /* Hover effect for the login button */
+  .login button:hover {
+    color: #fdfdfd;
+    border-color: #ffffff;
+  }
+  
+  /* Media query for mobile devices */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .logo a,
+    .nav-links a,
+    .login button {
+      margin: 10px 20px; /* Adjusted margin for better spacing */
+    }
+  
+    .search-bar {
+      width: 90%;
+      margin-top: 10px; /* Adjusted margin for better spacing */
+    }
+  }
+  
+
