@@ -8,6 +8,7 @@ function App() {
   return (
     <BrowserRouter>
     <div className="App">
+      
     <Header />
         <Routes>
         <Route path="Projects/" element={<HomePage />} />
