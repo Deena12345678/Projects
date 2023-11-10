@@ -10,7 +10,7 @@ function App() {
     <div className="App">
     <Header />
         <Routes>
-        <Route path="deena12345678.github.io/Projects/" element={<HomePage />} />
+        <Route path="Projects/" element={<HomePage />} />
         </Routes>
     </div>
     </BrowserRouter>
