@@ -2,9 +2,12 @@
 
 import React, { useEffect, useState } from 'react';
 import './header.css'; // Import your CSS file for styling
-
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../auth';
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
+  const  auth = useAuth();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,6 +20,11 @@ const Header = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const handleLoginClick = () => {
+    // Navigate to the login page when the "Login" button is clicked
+    navigate('Projects/login');
+  };
 
   return (
     <div className={`head ${isScrolled ? 'header-scrolled' : ''}`}>
@@ -37,9 +45,11 @@ const Header = () => {
           <input type="text" placeholder="Search..." />
           <button>Search</button>
         </div>
-        <div className="login">
-          <button>Login</button>
-        </div>
+        
+        {!auth.user && (<div className="login">
+          <button onClick={handleLoginClick}>Login</button>
+        </div>)}
+        
       </div>
     </div>
   );
