@@ -10,7 +10,7 @@ function App() {
 
   return (
     <AuthProvider>
-   
+     <BrowserRouter>
     <div className="App">
       
     <Header />
@@ -21,7 +21,7 @@ function App() {
         
         </Routes>
     </div>
-  
+    </BrowserRouter>
     </AuthProvider>
   );
 }
